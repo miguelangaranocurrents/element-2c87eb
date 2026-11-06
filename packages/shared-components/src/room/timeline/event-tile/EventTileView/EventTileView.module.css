@@ -119,9 +119,10 @@
 }
 
 /* The shell controls the body-slot surface. Body components own their
-   internal content styling. */
+   internal content styling. Overflow is deliberately not clipped here: the
+   body slot also hosts the edit composer, whose autocomplete panel is
+   positioned above the composer and must not be cut off. */
 .slotBody > * {
-    overflow-y: hidden;
     text-align: start;
 }
 

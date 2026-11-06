@@ -41,6 +41,13 @@
     display: flex;
 }
 
+/* The body is a flex item whose automatic minimum size is its min-content size.
+   Without this it refuses to shrink below wide children such as a long code
+   block line, pushing the message text out of the viewport. */
+.annotated > :first-child {
+    min-width: 0;
+}
+
 .annotatedInline {
     display: inline-flex;
 }
